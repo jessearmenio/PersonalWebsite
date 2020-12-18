@@ -1,4 +1,8 @@
-﻿/*General Body Styling*/
+﻿html{
+	width: 100%
+}
+
+/*General Body Styling*/
 body {
 	padding: 0;
 	margin: 0;
@@ -13,9 +17,9 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
 	align-content: center;
 	display: block;
+	width: 100%;
 }
 
 	.container-fluid span {
@@ -23,56 +27,169 @@ body {
 		display: block;
 	}
 
+/*About page temp. styling*/
+.AboutComing {
+	font-family: sans-serif;
+	margin-top: auto;
+	font-size: 35px;
+	margin-bottom: auto;
+	overflow: hidden;
+
+}
+
+/*About Tab (Top Right) Styling*/
+.AboutNav {
+	text-align: center;
+	background-color: transparent;
+	font-size: 30px;
+	font-family: sans-serif;
+	color: dimgrey;
+	font-weight: 400;
+	display: block;
+	float: right;
+	margin-top: 30px;
+	margin-right: 45px;
+	animation: Post 3.6s;
+}
+
+/*About Tab Hover Animation*/
+	.AboutNav:hover {
+		font-family: sans-serif;
+		color: dimgrey;
+		text-decoration: line-through;
+	}
+
+/*Line Through Text on All 3 Links (Span1 Divs) Animation*/
+span1 {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+}
+
+	span1:before, span1:after {
+		content: '';
+		position: absolute;
+		width: 0%;
+		height: 1px;
+		top: 50%;
+		margin-top: -0.5px;
+		background: black;
+		font-weight: 600;
+	}
+
+	span1:before {
+		left: -2.5px;
+	}
+
+	span1:after {
+		right: 2.5px;
+		background: black;
+		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+		font-weight: 600;
+	}
+
+	span1:hover:before {
+		background: black;
+		width: 100%;
+		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+	}
+
+	span1:hover:after {
+		background: transparent;
+		width: 100%;
+		transition: 0s;
+		font-weight: 600;
+	}
+		}
+
 /* Personal Name Styling and Animation Settings*/
+/*First Name*/
 .text1 {
 	font-size: 60px;
 	font-weight: 700;
 	letter-spacing: 6px;
-	margin-bottom: -10px;
+	margin-bottom: 0px;
 	position: relative;
 	animation: text 3s 1;
 	color: black;
+	font-family: sans-serif;
+	text-align: center;
 }
 
+/*Last Name*/
 .text2 {
-	font-size: 30px;
+	font-size: 35px;
 	color: darkgray;
 	position: relative;
-	animation: text 4s 1;
+	animation: text 3s 1;
+	font-family: sans-serif;
+	text-align: center;
 }
 
-/*LinkedIn and GitHub Text Styling / Hover */
+/*Resume Link Styling*/
 .link1 {
-	font-size: 20px;
+	font-size: 25px;
 	color: grey;
 	position: relative;
-	margin-top: 48px;
-	animation: link 5s 1;
+	margin-top: 30px;
+	animation: link 3.5s 1;
+	display: block;
+	font-family: sans-serif;
 }
-
+/*Resume Hover Animation*/
 	.link1:hover {
 		position: relative;
-		color: black;
-		text-transform: capitalize;
-		font-family: sans-serif;
+		color: dimgrey;
+		font-weight: 600;
 	}
 
-.link2 {
+/*LinkedIn and GitHub Link Styling*/
+.link2,
+.link3 {
 	font-size: 20px;
 	color: grey;
 	position: relative;
-	margin-top: 48px;
-	animation: link 5s 1;
+	margin-top: 20px;
+	animation: Post 3.6s 1;
+	display: block;
+	font-family: Arial;
 }
 
+/*LinkedIn Hover Animation*/
 	.link2:hover {
 		position: relative;
-		color: black;
-		text-transform: capitalize;
-		font-family: sans-serif;
+		color: dimgrey;
+		font-weight: 600;
 	}
 
-/* --Still in development-- Hover Animations */
+/*GitHub Hover Animation*/
+	.link3:hover {
+		position: relative;
+		color: dimgrey;
+		font-weight: 600;
+	}
+
+/*
+/*
+/* --Still in development-- Hover Animations 
+/*
+.card{
+	font-size: 25px;
+	color: burlywood;
+	border: 1px;
+	margin-top: -95px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: sans-serif;
+	animation: card 6.3s 1;
+	display: block;
+	position: relative;
+	background: transparent; 
+	text-align: center;
+	
+}
+
 @keyframes linkhover {
 	0% {
 		letter-spacing: 0px;
@@ -86,8 +203,12 @@ body {
 		letter-spacing: 0px;
 	}
 }
+/**/
+/**/
+/**/
 
-/*Personal Name Animation*/
+
+/*Full Name Animation*/
 @keyframes text {
 	0% {
 		color: black;
@@ -129,19 +250,20 @@ body {
 	}
 }
 
-/*LinkedIn and Github Animations*/
+/*Resume Link Animation*/
 @keyframes link {
 	0% {
-		color: black;
+		color: white;
 		transform: translateX(500);
 		transform: translateY(500);
 		margin-top: 100px;
 		visibility: hidden;
+
 	}
 
 
 	10% {
-		color: black;
+		color: white;
 		transform: translateX(0);
 		transform: translateY(0);
 		margin-top: 100px;
@@ -154,18 +276,21 @@ body {
 		color: white;
 	}
 
-	43% {
-		transform: translateX(-78px);
-		transform: translateY(-78px);
+	40% {
+		transform: translateX(-80px);
+		transform: translateY(-75px);
 		margin-top: 50px;
+		font-weight: 900;
+		letter-spacing: 100px;
 		color: grey;
 	}
 
 	47% {
-		transform: translateX(-78px);
-		transform: translateY(-78px);
+		transform: translateX(-80px);
+		transform: translateY(-75px);
 		margin-top: 50px;
-		color: white;
+		letter-spacing: 25px;
+		color: grey;
 	}
 
 	66% {
@@ -179,23 +304,43 @@ body {
 		transform: translateX(50px);
 		transform: translateY(50px);
 		margin-top: 0px;
-		color: white;
+		color: grey;
+		font-weight: 400;
 	}
 }
 
-/* Cloud Div Styling*/
+/*LinkedIn,GitHub, and About Link Animation*/
+@keyframes Post {
+
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	90%{
+		visibility: visible;
+		opacity: 0;
+		color: white; 
+		letter-spacing: 35px;
+	}
+	100% {
+		opacity: 100;
+		color: grey;
+		visibility: visible;
+		letter-spacing: 0;
+	}
+}
+
+/* Cloud Background Div Styling*/
 div.clouds {
 	position: relative;
-	overflow: hidden;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	transition: ease-in-out;
 }
 
 /*All Cloud Styling, Placement, and Animation Settings*/
 .firstCloud {
-	position: absolute;
+	position: relative;
 	left: -170px;
 	top: 150px;
 	animation: move 25s linear 2s infinite;
@@ -215,7 +360,7 @@ div.clouds {
 .thirdCloud {
 	top: 250px;
 	left: -170px;
-	position: absolute;
+	position: relative;
 	animation: move 23s linear 1s infinite;
 	width: 200px;
 	opacity: 0.8;
@@ -224,7 +369,7 @@ div.clouds {
 .fourthCloud {
 	top: 225px;
 	left: -170px;
-	position: absolute;
+	position: relative;
 	animation: move 25s linear 2s infinite;
 	width: 200px;
 	opacity: 0.5;
@@ -233,16 +378,16 @@ div.clouds {
 .FifthCloud {
 	top: 350px;
 	left: -170px;
-	position: absolute;
+	position: relative;
 	animation: move 27s linear 4s infinite;
 	width: 200px;
-	opacity: 0.4;
+	opacity: 0.8;
 }
 
 .SixthCloud {
-	position: absolute;
-	left: -170px;
 	top: 300px;
+	left: -170px;
+	position: absolute;
 	animation: move 30s linear 0s infinite;
 	width: 150px;
 	opacity: 0.7;
@@ -270,7 +415,7 @@ div.clouds {
 	top: 500px;
 	left: -170px;
 	position: absolute;
-	animation: move 2s linear 2s infinite;
+	animation: move 22s linear 2s infinite;
 	width: 200px;
 	opacity: 0.8;
 }
