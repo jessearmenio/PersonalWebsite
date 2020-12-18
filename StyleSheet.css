@@ -47,8 +47,8 @@ body {
 	font-weight: 400;
 	display: block;
 	float: right;
-	margin-top: 30px;
-	margin-right: 45px;
+	margin-top: 20px;
+	margin-right: 30px;
 	animation: Post 3.6s;
 }
 
@@ -59,7 +59,7 @@ body {
 		text-decoration: line-through;
 	}
 
-/*Line Through Text on All 3 Links (Span1 Divs) Animation*/
+/*Line Through Text on Resume Coloring / Hover Animation */
 span1 {
 	position: relative;
 	display: block;
@@ -74,8 +74,9 @@ span1 {
 		height: 1px;
 		top: 50%;
 		margin-top: -0.5px;
-		background: black;
+		background: #b8860b;
 		font-weight: 600;
+		overflow: hidden;
 	}
 
 	span1:before {
@@ -84,13 +85,14 @@ span1 {
 
 	span1:after {
 		right: 2.5px;
-		background: black;
+		background: #b8860b;
 		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 		font-weight: 600;
+		overflow: hidden;
 	}
 
 	span1:hover:before {
-		background: black;
+		background: #b8860b;
 		width: 100%;
 		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 	}
@@ -100,8 +102,100 @@ span1 {
 		width: 100%;
 		transition: 0s;
 		font-weight: 600;
+		overflow: hidden;
 	}
-		}
+
+/*Line Through for LinkedIn Link Coloring / Hover Animation*/
+span2 {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+}
+
+	span2:before, span2:after {
+		content: '';
+		position: absolute;
+		width: 0%;
+		height: 1px;
+		top: 50%;
+		margin-top: -0.5px;
+		background: #008fdd;
+		font-weight: 600;
+		overflow: hidden;
+	}
+
+	span2:before {
+		left: -2.5px;
+	}
+
+	span2:after {
+		right: 2.5px;
+		background: #008fdd;
+		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+		font-weight: 600;
+		overflow: hidden;
+	}
+
+	span2:hover:before {
+		background: #008fdd;
+		width: 100%;
+		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+	}
+
+	span2:hover:after {
+		background: transparent;
+		width: 100%;
+		transition: 0s;
+		font-weight: 600;
+		overflow: hidden;
+	}
+
+/*Line Through for GitHub Link Coloring / Hover Animation*/
+span3 {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+}
+
+	span3:before, span3:after {
+		content: '';
+		position: absolute;
+		width: 0%;
+		height: 1px;
+		top: 50%;
+		margin-top: -0.5px;
+		background: #b300b3;
+		font-weight: 600;
+		overflow: hidden;
+	}
+
+	span3:before {
+		left: -2.5px;
+	}
+
+	span3:after {
+		right: 2.5px;
+		background: #b300b3;
+		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+		font-weight: 600;
+		overflow: hidden;
+	}
+
+	span3:hover:before {
+		background: #b300b3;
+		width: 100%;
+		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+	}
+
+	span3:hover:after {
+		background: transparent;
+		width: 100%;
+		transition: 0s;
+		font-weight: 600;
+		overflow: hidden;
+	}
 
 /* Personal Name Styling and Animation Settings*/
 /*First Name*/
@@ -140,7 +234,7 @@ span1 {
 /*Resume Hover Animation*/
 	.link1:hover {
 		position: relative;
-		color: dimgrey;
+		color: darkgoldenrod;
 		font-weight: 600;
 	}
 
@@ -153,20 +247,21 @@ span1 {
 	margin-top: 20px;
 	animation: Post 3.6s 1;
 	display: block;
+	font-weight: 500;
 	font-family: Arial;
 }
 
 /*LinkedIn Hover Animation*/
 	.link2:hover {
 		position: relative;
-		color: dimgrey;
+		color: #008fdd;
 		font-weight: 600;
 	}
 
 /*GitHub Hover Animation*/
 	.link3:hover {
 		position: relative;
-		color: dimgrey;
+		color: #b300b3;
 		font-weight: 600;
 	}
 
