@@ -290,7 +290,7 @@ body {
 	33% {
 		letter-spacing: 25px;
 		margin-bottom: -40px;
-		color: white;
+		color: grey;
 	}
 
 	43% {
@@ -302,14 +302,14 @@ body {
 	47% {
 		letter-spacing: 25px;
 		margin-bottom: -40px;
-		color: lightgrey;
+		color: white;
 	}
 
 
 	66% {
 		letter-spacing: 25px;
 		margin-bottom: -40px;
-		color: #202020;
+		color: lightgrey;
 	}
 
 	75% {
@@ -343,6 +343,7 @@ body {
 		transform: translateY(-78px);
 		margin-top: 50px;
 		color: black;
+		opacity: 0;
 	}
 
 	40% {
