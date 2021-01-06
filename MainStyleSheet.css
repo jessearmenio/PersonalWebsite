@@ -1,4 +1,4 @@
-﻿﻿/*This website is under development and changes daily.*/
+﻿﻿﻿/*This website is under development and changes daily.*/
 /*The goal is to achieve a short but sweet browsing experience with fun animations.*/
 /*HTML div Sizing*/
 html {
@@ -540,9 +540,11 @@ div.clouds {
 		opacity: 0.5;
 		transform: rotate(200deg)
 	}
-	10%{
+
+	10% {
 		opacity: 0.7
 	}
+
 	30% {
 		opacity: 1;
 	}

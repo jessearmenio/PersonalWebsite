@@ -53,8 +53,8 @@ body {
 	font-weight: 400;
 	display: block;
 	float: right;
-	margin-top: 20px;
-	margin-right: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
 	animation: Post 3.6s;
 	opacity: 0.6;
 }
@@ -420,3 +420,13 @@ div.clouds {
 		left: 100%;
 	}
 }
+
+/*Resize Soundcloud Embed if Width is <500px */
+@media only screen and (max-width: 500) {
+	.link2 {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+
