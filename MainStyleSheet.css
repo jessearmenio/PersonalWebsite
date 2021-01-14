@@ -221,6 +221,70 @@ body {
 	}
 }
 
+/*"About Nav Link (Top Right) Animation  //// Commented out until About Page is Developed.*/
+@keyframes AboutNav {
+	0% {
+		opacity: 0;
+	}
+
+	90% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+/*Temporary About Tab (Top Right) Styling*/
+.AboutNav {
+	text-decoration: none;
+	background-color: transparent;
+	font-size: 30px;
+	font-family: sans-serif;
+	text-align: right;
+	color: darkgrey;
+	font-weight: 400;
+	display: block;
+	float: right;
+	margin-top: 2%;
+	margin-right: 2%;
+	opacity: 0.5;
+	height: 100%;
+}
+
+	/*About Tab Hover Animation*/
+	.AboutNav:hover {
+		opacity: 1;
+		animation: AboutNav 1s;
+		text-decoration: none;
+		color: darkgrey
+	}
+
+@keyframes AboutNav {
+	0%, 20% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
 /*
 /*START of Cloud Styling*/
 /*
@@ -283,7 +347,7 @@ div.clouds {
 }
 /*Cloud 6*/
 .SixthCloud {
-	top: 20%;
+	top: 5%;
 	left: -200px;
 	position: absolute;
 	animation: move 30s linear 3.6s infinite;

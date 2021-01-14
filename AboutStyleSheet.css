@@ -1,32 +1,55 @@
-﻿/*Background of page fill*/
+﻿html {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Background of page fill*/
 body {
 	background-color: black;
 	width: 100%;
+	margin: 0 auto;
+}
+
+/*Row Styling*/
+.row {
+	font-size: 20px;
+	font-family: sans-serif;
+	margin: 0 auto;
 }
 
 /*Main Name Header Title Styling*/
 h1 {
 	background-color: transparent;
-	color: grey;
+	color: #333;
 	margin-bottom: -5px;
-	text-align: center;
+	text-align: right;
 	font-size: 65px;
 	font-family: 'Century Gothic';
 	margin-top: 20%;
+	width: 100%;
+	left: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 30%;
+	float: right;
+	animation: h1 6s infinite;
+	animation-delay: 3s;
+	-webkit-transform: translateY(30px);
+	transform: translateY(30px);
 }
 
-@media only screen and (max-width: 500) {
+
+/*Main Name Header Resize at 700px -- (Half-Window)*/
+@media only screen and (max-width: 1017px) {
 	h1 {
 		text-align: right;
+		padding-right: 5%;
+		animation: h1mobile 6s infinite;
+		animation-delay: 3s;
 	}
 }
 
-@media only screen and (max-height: 850px) {
-	h1 {
-		text-align: right;
-	}
-}
-
+/* Body Paragraph Header Title*/
 h2 {
 	font-family: 'Century Gothic';
 	font-size: 30px;
@@ -35,51 +58,34 @@ h2 {
 	background-color: transparent
 }
 
-/*Row Styling*/
-.row {
-	font-size: 20px;
-	font-family: sans-serif;
-}
-
-/*About & Education Header Title Styling*/
-h3 {
-	background-color: transparent;
-	color: grey;
-	text-align: center;
-	font-size: 45px;
-	font-family: 'Century Gothic';
-	margin-bottom: 0;
-	margin-top: 5%;
-	width: 100%;
-}
-
 /*All Headers Extra Styling*/
-h1, h2, h3 {
+h1, h2 {
 	text-shadow: 0px 0px 6px rgba(50,25,55,0.5);
 }
 
 /*AboutPicture Styling*/
 #AboutPicture {
 	position: absolute;
+	margin-right: 10%;
 	margin-left: 10%;
-	margin-top: 5%;
-	margin-bottom: 25%;
+	margin-top: 10%;
 	display: block;
-	top: 10%;
+	top: 5%;
+	float: left;
 	animation: AboutPicture 3s;
 }
 
-@keyframes AboutPicture {
-	0% { margin-left: -100%;
-		 opacity: 0;
-		 border-radius: 0;
-	}
-	90% {
-		opacity: 0.5;
-	}
-	100% {
-		opacity: 1;
-		margin-left: 10%;
+/*About Picture Resize at 700 px -- (Half-Window)*/
+@media only screen and (max-width: 700px) {
+	#AboutPicture {
+		margin-top: 15%;
+		margin-left: 15%;
+		margin-right: 0;
+		animation: AboutPictureMobile 3s;
+		display: block;
+		top: 5%;
+		float: left;
+		position: absolute;
 	}
 }
 
@@ -89,6 +95,10 @@ img {
 	width: 40%;
 	border-radius: 4%;
 }
+	/*AboutPicture Bounces when Hovered*/
+	img:hover {
+		animation: hoverbody 1s
+	}
 
 /*Body Paragraph Styling*/
 SpanA {
@@ -97,77 +107,143 @@ SpanA {
 	margin-right: 5%;
 }
 
-/*About & Education Positioning*/
+/*About Paragraph Positioning -- (About)*/
 #About1 {
-	top: 10%;
-	left: 40%;
-	padding-right: 10%;
-	margin-left: 0;
-	margin-right: 0;
+	top: 20%;
+	padding-right: 0;
 	display: block;
 	text-align: left;
 	position: absolute;
+	left: 45%;
+	float: right;
 }
 
-/*About & Education Mobile Device/Small Screen Adjustment*/
-@media only screen and (max-width: 850) {
+	/*About Paragraph Bounces when Hovered*/
+	#About1:hover {
+		animation: hoverbody 1s;
+	}
+
+/*About Paragraph 700 px Resizing -- (Half-Window)*/
+@media only screen and (max-width: 700px) {
 	#About1 {
-		left: 0;
 		top: 25%;
-		padding-left: 10%;
-		padding-right: 10%;
+		margin-top: 0;
+		margin-bottom: 5%;
+		left: 8%;
+		margin-left: 0 auto;
+		padding: 2%;
+		margin-right: 0 auto;
+		width: 90%;
 	}
 }
 
-@media only screen and (max-height: 850px) {
-	#About1 {
-		left: 0;
-		top: 25%;
-		padding-left: 10%;
-		padding-right: 10%;
+/*First Paragraph Styling -- (About)*/
+#Ap3 {
+	background-color: white;
+	border-radius: 4%;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	margin-left: auto;
+	margin-right: 5%;
+	margin-bottom: auto;
+	font-family: Calibri;
+	font-size: 20px;
+	display: block;
+	float: right;
+	width: 100%;
+	position: relative;
+	animation: About1 3s
+}
+
+/*About & Education 700 px Resize -- (Half-Window)*/
+@media only screen and (max-width: 700px) {
+	#Ap3 {
+		background-color: white;
+		border-radius: 4%;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 5%;
+		padding-top: 3%;
+		margin-left: 0 auto;
+		margin-right: 0 auto;
+		margin-bottom: auto;
+		font-family: Calibri;
+		font-size: 20px;
+		display: block;
+		position: relative;
+		width: 90%;
 	}
 }
 
-/*Initial Paragraph after About 1 (About & Education)*/
+/*Initial Paragraph after About 1 (WideScreen) -- (Education)*/
 #About2 {
-	padding: 5%;
-	margin-top: 80%;
-	margin-right: 10%;
-	margin-left: 10%;
+	margin-top: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1%;
+	padding: 2%;
 	text-align: left;
 	position: relative;
 	background-color: white;
 	border-radius: 4%;
+	width: 80%;
 }
 
-@media only screen and (max-width: 850px) {
+	/* About2 (Education) bounces when hovered*/
+	#About2:hover {
+		animation: hoverbody 1s;
+	}
+
+
+/* About2 Spacing for Different Size Screen Widths -- (Education)*/
+/*-- 550 px Resize -- (iPhone)*/
+@media only screen and (max-width: 550px) {
+	#About2 {
+		margin-top: 600%;
+	}
+}
+
+/*-- 700 px Resize -- (Half-Window)*/
+@media only screen and (max-width: 700px) {
 	#About2 {
 		margin-top: 500%;
 	}
 }
 
-@media only screen and (max-height: 850px) {
+/*-- 1233 px Resize --- (Full-Screen) */
+@media only screen and (max-width: 1233px) {
 	#About2 {
-	margin-top: 500%;
+		margin-top: 350%;
 	}
 }
 
-/*Styling for all Paragraphs following the inital White Box*/
+/*Styling for Paragraphs following About 2 -- (IT Experience, Development Skills, Soft Skills, Invovlement)*/
 #About3 {
 	margin-top: 15%;
-	margin-right: 10%;
-	margin-left: 10%;
-	padding: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1%;
+	padding: 2%;
 	text-align: left;
 	position: relative;
 	background-color: white;
 	border-radius: 4%;
+	width: 80%;
+	left: 0;
 }
+
+	/*About3 bounce on hover --  (IT Experience, Development Skills, Soft Skills, Invovlement)*/
+	#About3:hover {
+		animation: hoverbody 1s;
+	}
+
 /*Extra Black Space Positioning at bottom of the page*/
 #About4 {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50%;
+	margin-top: 20%;
 	width: 80%;
 	padding: 2%;
 	text-align: center;
@@ -188,51 +264,7 @@ SpanA {
 	font-size: 20px;
 }
 
-
-/*About & Education Styling*/
-#Ap3 {
-	background-color: white;
-	border-radius: 4%;
-	padding: 5%;
-	margin-left: 10%;
-	margin-right: auto;
-	margin-bottom: auto;
-	font-family: Calibri;
-	font-size: 20px;
-	display: block;
-}
-
-/*About & Education Mobile Phone/Small Screen Adjustment*/
-@media only screen and (max-width: 850px) {
-	#Ap3 {
-		background-color: white;
-		border-radius: 4%;
-		padding: 5%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: auto;
-		font-family: Calibri;
-		font-size: 20px;
-		display: block;
-		position: relative;
-	}
-}
-@media only screen and (max-height: 850px) {
-	#Ap3 {
-		background-color: white;
-		border-radius: 4%;
-		padding: 5%;
-		margin-left: 10%;
-		margin-right: 10%;
-		margin-bottom: auto;
-		font-family: Calibri;
-		font-size: 20px;
-		display: block;
-		position: relative;
-	}
-}
-
-/*Return to home Box*/
+/*Return to home Button*/
 #AboutReturn {
 	height: 25px;
 	width: 100px;
@@ -249,6 +281,7 @@ SpanA {
 /*Return to home - Inside Box / Text*/
 #Return {
 	background-color: grey;
+	border-radius: 10%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -257,98 +290,287 @@ SpanA {
 	color: white;
 }
 
-/*Return to home Link Styling*/
+/*Extra Link Text* Styling*/
 .returnlink {
 	color: white;
 }
 
-/*Return to home link hover animation*/
+/*Return to home button hover Styling*/
 #Return:hover {
-	border-radius: 10%;
+	animation: Return 1s;
 }
 
-/*Lists in the body display in two columns*/
-ul {
-	columns: 2;
-	-webkit-columns: 2;
-	-moz-columns: 2;
-	padding: 10px;
+/*Return to home button click Styling*/
+#Return:active {
+	border-radius: 10%;
+	animation: Return 1s;
 }
 
 /*AboutNav at Top of Page*/
 #AboutNav {
-	display: block;
+	display: inline-block;
 	left: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
 	text-align: center;
 	position: fixed;
 	bottom: 95%;
 	width: 100%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	list-style: none;
 	overflow: hidden;
 	background-color: #333;
-	display: block;
 	font-family: Calibri;
-	animation: AboutNav 3s;
-	border: thin;
-	border-color: black;
 	columns: 6;
 	-webkit-columns: 6;
-	-moz-columns: 6;
+	-moz-columns: 8;
 	opacity: 0.7;
+	animation: AboutNav 3s;
 }
 
-	/*About Nav Links Styling*/
+/*Main About Nav Resize at 500 px -- 2 Columns 80% bottom*/
+@media only screen and (max-width: 500px) {
+	#AboutNav {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: 80%;
+		margin-left: auto;
+		margin-right: 5%;
+		margin-top: 10px;
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		opacity: 0.7;
+		width: 100%;
+		animation: AboutNavMobile 3s;
+	}
+}
+
+/*Main About Nav Resize at 1200 px -- 2 Columns 85% bottom*/
+@media only screen and (max-width: 1200px) {
+	#AboutNav {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: 85%;
+		margin-left: auto;
+		margin-right: 5%;
+		margin-top: 10px;
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		opacity: 0.7;
+		width: 100%;
+		animation: AboutNavMobile2 3s;
+	}
+}
+
+/*About Nav Links Styling*/
+#AboutNav a {
+	width: 100%;
+	margin: 0;
+	padding: 10px 10px;
+	display: block;
+	color: white;
+	text-align: center;
+	opacity: 0.7;
+	text-decoration: none;
+	animation: AboutNavLetters 3s;
+	border: 3px;
+	border-color: black;
+}
+
+/*About Nav Links Resize at 500 px -- (iPhone)*/
+@media only screen and (max-width: 500px) {
 	#AboutNav a {
 		width: 100%;
-		display: inline-block;
+		margin: 0;
+		padding: 0;
+		display: block;
 		color: white;
 		text-align: center;
-		padding: 10px 10px;
+		opacity: 0.7;
 		text-decoration: none;
 		animation: AboutNavLetters 3s;
-	}
-		/*AboutNav Links Hover Animation*/
-		#AboutNav a:hover {
-			opacity: 1;
-		}
-
-/*AboutNav from 6 Columns to 1 Column on Smaller Mobile Phones*/
-@media only screen and (max-width: 500) {
-	#AboutNav {
-		bottom: 80%;
-		columns: 2;
-		-webkit-columns: 2;
-		-moz-columns: 2;
-		animation: AboutNavMobile 3s;
+		border: 3px;
+		border-color: black;
 	}
 }
 
-@media only screen and (max-height: 850px) {
-	#AboutNav {
-		bottom: 80%;
-		columns: 2;
-		-webkit-columns: 2;
-		-moz-columns: 2;
-		animation: AboutNavMobile 3s;
+/*AboutNav Links Hover Animation*/
+#AboutNav a:hover {
+	color: lightslategrey;
+	opacity: 1;
+}
+/* END of General Styling*/
+
+/*START ALL ANIMATIONS*/
+/*Full Name Animation*/
+@keyframes h1 {
+	0% {
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+		letter-spacing: normal;
+		opacity: 1;
+	}
+
+	25% {
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-100px);
+		letter-spacing: 10px;
+		color: white;
+		opacity: 0.7;
+		padding-right: 25%;
+	}
+
+	50% {
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+		letter-spacing: -10px;
+		color: #484848;
+		opacity: 1;
+		padding-right: 40%;
+	}
+
+	75% {
+		-webkit-transform: translateY(-50px);
+		transform: translateY(-50px);
+		letter-spacing: 10px;
+		color: white;
+		opacity: 1;
+		padding-right: 25%;
+	}
+
+	100% {
+		-webkit-transform: translateY(30);
+		transform: translateY(30);
+		letter-spacing: normal;
+		opacity: 1;
 	}
 }
 
-/*AboutPicture & About/Education Columns Resize on Smaller Mobile Phones*/
-@media only screen and (max-width: 500) {
-	#AboutPicture, #About1 {
-		margin-top: 25%;
+/*Full Name Animation on Screens 500 px -- (iPhone)*/
+@keyframes h1mobile {
+	0% {
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+		letter-spacing: normal;
+		opacity: 1;
+	}
+
+	25% {
+		-webkit-transform: translateY(-115px);
+		transform: translateY(-115px);
+		letter-spacing: 5px;
+		color: white;
+		opacity: 0.5;
+	}
+
+	50% {
+		-webkit-transform: translateY(30px);
+		transform: translateY(30px);
+		letter-spacing: 7px;
+		color: #484848;
+		opacity: 0.7;
+	}
+
+	75% {
+		-webkit-transform: translateY(-50px);
+		transform: translateY(-50px);
+		letter-spacing: 5px;
+		color: white;
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: translateY(30);
+		transform: translateY(30);
+		letter-spacing: normal;
+		opacity: 1;
 	}
 }
 
-@media only screen and (max-height: 850px) {
-	#AboutPicture, #About1 {
-		margin-top: 25%;
+/*About1 (About) -- Paragraph Entrance Animation*/
+@keyframes About1 {
+	0% {
+		margin-right: 200%
+	}
+
+	100% {
+		margin-right: 5%;
 	}
 }
 
-/*AboutNav - Opening Animation*/
+/*About Picture Entrance Animation*/
+@keyframes AboutPicture {
+	0% {
+		margin-left: -100%;
+		opacity: 0;
+		border-radius: 0;
+	}
+
+	90% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+		margin-left: 10%;
+	}
+}
+
+/*About Picture Entrance Animation at 700 px -- (Half-Window)*/
+@keyframes AboutPictureMobile {
+	0% {
+		margin-left: -100%;
+		opacity: 0;
+		border-radius: 0;
+	}
+
+	90% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 15%;
+		margin-left: 15%;
+		margin-right: 0;
+	}
+}
+
+/*Animation for all general body to bounce on hover*/
+@keyframes hoverbody {
+	0%, 20% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	60% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+/* Main Nav Intro Animation */
 @keyframes AboutNav {
 	0% {
 		background-color: black;
@@ -389,7 +611,7 @@ ul {
 	}
 }
 
-/*AboutNav Mobile - Opening Animation*/
+/* Main Nav Intro at 1200px */
 @keyframes AboutNavMobile {
 	0% {
 		background-color: black;
@@ -430,7 +652,48 @@ ul {
 	}
 }
 
-/*AboutNav Links - Opening Animation*/
+/* Main Nav Intro at 500px */
+@keyframes AboutNavMobile2 {
+	0% {
+		background-color: black;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		opacity: 1;
+	}
+
+	35% {
+		background-color: #333;
+		width: 100%;
+		height: 100%;
+		opacity: 1
+	}
+
+	50% {
+		background-color: #333;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	}
+
+	90% {
+		background-color: #333;
+		width: 100%;
+		height: 100%;
+		bottom: 100%;
+		opacity: 0.7;
+	}
+
+	100% {
+		background-color: #333;
+		width: 100%;
+		height: 100%;
+		bottom: 85%;
+		opacity: 0.5;
+	}
+}
+
+/*AboutNav Links - Intro Animation*/
 @keyframes AboutNavLetters {
 	0% {
 		background-color: #333;
@@ -443,5 +706,33 @@ ul {
 	}
 }
 
+/*Return button click (active) and hover Animation */
+@keyframes Return {
+	0%, 20% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
 
-/*END of About Page Styling*/
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	60% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+/* END OF ANIMATIONS */
+
