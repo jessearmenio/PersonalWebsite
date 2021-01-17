@@ -257,10 +257,11 @@ body {
 	.AboutNav:hover {
 		opacity: 1;
 		animation: AboutNav 1s;
-		text-decoration: none;
+	 	text-decoration: none;
 		color: darkgrey
 	}
 
+/*Makes About Tab bounce on hover*/
 @keyframes AboutNav {
 	0%, 20% {
 		-webkit-transform: translateY(0);
@@ -643,47 +644,3 @@ span3:hover:after {
 /*
 /*
 End of Home Page Styling
-/*
-/*
-/*Below is in Development until About Page is Deployed.*/
-/*
-/*
-/*"About Nav Link (Top Right) Animation  //// Commented out until About Page is Developed.
-@keyframes AboutNav {
-	0% {
-		opacity: 0;
-	}
-
-	90% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0.5;
-	}
-}
-
-/*Temporary About Tab (Top Right) Styling
-.AboutNav {
-	text-align: center;
-	background-color: transparent;
-	font-size: 30px;
-	font-family: sans-serif;
-	color: darkgrey;
-	font-weight: 400;
-	display: block;
-	float: right;
-	margin-top: 20px;
-	margin-right: 30px;
-	animation: AboutNav 3.6s;
-	opacity: 0.5;
-}
-
-	/*About Tab Hover Animation
-	.AboutNav:hover {
-		font-family: sans-serif;
-		color: darkgrey;
-		text-decoration: line-through;
-		opacity: 1;
-	}
-*/
